@@ -1,0 +1,8 @@
+$font-M-Plus: 'Mplus 1p', sans-serif;
+
+/*подзаголоки h3*/
+@mixin headline{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
