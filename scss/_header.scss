@@ -4,7 +4,7 @@
     &__container{
         display: flex;
         justify-content: space-between;
-        padding: 28px 15px 25px;
+        padding: 30px 15px 25px;
     }
 
 	&__logo {
@@ -25,10 +25,21 @@
 
 	&__links {
         display: flex;
-        max-width: 285px;
+        max-width: 286px;
+        gap: 7px;
 
         @media(max-width: 425px){
             max-width: 200px;        
+        }
+    }
+
+    &__search{
+        padding: 14px 30px 8px;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+
+        &:hover{
+            background-color: var(--hovered--link-color);
+            cursor: pointer;
         }
     }
 }
@@ -55,7 +66,7 @@
         display: none;
     }
 
-    & span{
+    & small{
         display: block;
         font-size: 10px;
         font-weight: 400;
@@ -76,6 +87,11 @@
     font-weight: 400;
     line-height: 21px; /* 150% */
     gap: 10px;
+    text-align: center;
+
+    // &:hover{
+    //     color: var(--text-color);
+    // }
 
 	&__icon {
         width: 21px;
@@ -90,16 +106,19 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 21px; /* 150% */
-    margin-right: 7px;
+    gap: 7px;
 
     @media(max-width: 1060px){
         margin-right: 0;
     }
 
     &-logo {
-        width: 35px;
+        width: 28px;
         height: 28px;
-        margin-right: 8px;
+    }
+
+    &-text{
+        flex: 1;
     }
 }
 

@@ -4,24 +4,28 @@
     background-color: var(--link-color);
     padding: 0;
 
+    &__container{
+        display: flex;
+    }
+        
     &__list{
 //menu
         & ul{
             display: flex;
-            justify-content: space-evenly;
             
             & li{
                 position: relative;
                 color: var(--bg-color-main);
+                border-right: 1px solid rgba(255, 255, 255, 0.05);
                 @include subtitle;
                 
                 & a{
-                    padding: 14px 25px;
+                    padding: 16px 27px 14px 33px;
                     display: block;
                 }
 
                 &:hover{
-                    background: var(--hovered--link-color);
+                    background-color: var(--hovered--link-color);
                 }
                 
                 &:hover > ul{
@@ -30,7 +34,7 @@
                     visibility: visible;
                 }
 //submenu
-                & ul, form{
+                & ul{
                     position: absolute;
                     background-color: var(--bg-color-main);
                     flex-direction: column;
@@ -47,7 +51,7 @@
                     opacity: 0;
                     visibility: hidden;
                     
-                    & li, input {
+                    & li{
                         display: flex;
                         width: 43%;
                         color: var(--text-color);
