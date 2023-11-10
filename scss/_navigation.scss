@@ -10,13 +10,13 @@
         
     &__list{
 //menu
-        & ul{
+        & > ul{
             display: flex;
             
-            & li{
+            & > li{
                 position: relative;
                 color: var(--bg-color-main);
-                border-right: 1px solid rgba(255, 255, 255, 0.05);
+                border-left: 1px solid rgba(255, 255, 255, 0.05);
                 @include subtitle;
                 
                 & a{
@@ -24,52 +24,74 @@
                     display: block;
                 }
 
-                &:hover{
+                &:hover > a{
                     background-color: var(--hovered--link-color);
                 }
-                
+
+                & :hover > {
+                    & a{
+                        color: var(--hovered--link-color);
+                        background-color: var(--bg-color-main);
+                    }
+                }
+
                 &:hover > ul{
-                    transform: rotateX(0deg);
-                    opacity: 1;
-                    visibility: visible;
+                    @include nav-vissible;
                 }
 //submenu
-                & ul{
+                & > ul{
                     position: absolute;
                     background-color: var(--bg-color-main);
-                    flex-direction: column;
-                    justify-content: start;
-                    flex-wrap: wrap;
+                    display: block;
+                    column-count: 2;
                     width: 700px;
-                    gap: 20px;
+                    height: auto;
                     padding: 30px;
                     margin-top: 2px;
-                    z-index: 5;
                     box-shadow: 0px 2px 8px 0px rgba(31, 33, 36, 0.15);                    
-                    transform-origin: 0 0;
-                    transform: rotateX(90deg);
-                    opacity: 0;
-                    visibility: hidden;
+                    @include nav-hidden;
                     
-                    & li{
-                        display: flex;
-                        width: 43%;
+                    & > li  {
+                        width: 100%;
+                        margin-bottom: 20px;
                         color: var(--text-color);
                         @include headline;
                         text-transform: none;
 
                         &::before{
+                            position: absolute;
                             content: url('../img/header/menu-arrow.svg');
-                            margin-right: 15px;
                         }
 
-                        &:hover{
-                            color: var(--hovered--link-color);
-                            background-color: var(--bg-color-main);
+                        & :hover > {
+                            & a{
+                                color: var(--hovered--link-color);
+                                background-color: var(--bg-color-main);
+                            }
                         }
 
-                        & a{
-                            padding: 0;
+                        & > a{
+                            padding: 0 0 0 25px;
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 21px; /* 150% */
+                        }
+
+                        & ul{
+                            display: block;
+                            margin: 10px 0 0 25px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 21px; /* 150% */
+
+                            & li{
+                                margin-bottom: 5px;
+                                width: 100%;
+                                
+                                & > a{
+                                    padding: 0;
+                                }
+                            }
                         }
                     }
                 }
@@ -78,39 +100,24 @@
     }
 }
 
-.submenu-1{
-    height: 163px;
-}
-
 .submenu-2{
-    height: 325px;
     right: -150%;
 
     &__list{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        margin: 10px 0 0 25px;
-        font-weight: 400;
-        line-height: 21px; /* 150% */
+        
 
         & a{
-            padding: 0;
         }
     }
 
-    & li{
-        flex-wrap: wrap;
-    }
+
 
 }
 
 .submenu-3{
-    height: 258px;
     right: -250%;
 }
 
 .submenu-4{
-    height: 180px;
     right: 0;
 }

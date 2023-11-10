@@ -34,8 +34,10 @@
     }
 
     &__search{
+        position: relative;
         padding: 14px 30px 8px;
         border-right: 1px solid rgba(255, 255, 255, 0.05);
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
 
         &:hover{
             background-color: var(--hovered--link-color);
@@ -122,4 +124,38 @@
     }
 }
 
+//выпадающее меню поиска
+.form-search{
+    position: absolute;
+    right: 0;
+    top: 51px;
+    box-shadow: 0px 2px 8px 0px rgba(31, 33, 36, 0.15);
+    @include nav-hidden;
 
+    & input {
+        width: 100%;
+        border: none;
+        height: 50px;    
+        width: 1099px;
+        padding-left: 56px;
+        outline: none;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 14px;
+        left: 20px;
+    }
+
+    &__btn-closed {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+    }
+}
+
+.form-search{
+    &.form-search--active{
+        @include nav-vissible;
+    }
+}

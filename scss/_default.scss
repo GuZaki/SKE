@@ -28,6 +28,10 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+
+    &.lock{
+        overflow: hidden;
+    }
 }
 
 img {
@@ -129,4 +133,17 @@ section{
     line-height: 21px; /* 131.25% */
 }
 
+//скрывает выпадающие окна в меню навигации
+@mixin nav-hidden{
+    transform-origin: 0 0;
+    transform: rotateX(90deg);
+    opacity: 0;
+    visibility: hidden;
+}
 
+@mixin nav-vissible{
+    z-index: 5;
+    transform: rotateX(0deg);
+    opacity: 1;
+    visibility: visible;
+}
