@@ -1,0 +1,117 @@
+/*promo*/
+
+.promo {
+    padding: 0;
+
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        & img{
+            object-fit: cover;
+            // object-position: 50px top;
+        }
+    }
+
+    &__container{
+        position: relative;
+        
+    }
+
+    &__wrap {
+        
+    }
+
+    &__slider {
+        
+
+    }
+
+    &__slider-item {
+        position: relative;
+        height: 602px;
+        
+    }
+
+    &__subtitle {
+        padding-top: 91px;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 72px; /* 112.5% */
+    }
+
+
+    &__text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px; /* 166.667% */
+    }
+
+    &__btn {
+        font-family: 'Mplus 1p';
+        width: 250px;
+        padding: 14px 60px;
+        border-radius: 5px;
+        border: 1px solid var(--button-color);
+        color: var(--button-color);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px; /* 116.667% */
+        position: relative;
+        text-align: left;
+
+        &::after{
+            content: url('../img/slider/arrow-btn.svg');
+            position: absolute;
+            right: 60px;
+        }
+    }
+}
+
+.slider-content {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.slick-arrow,
+.slick-dots{
+    position: absolute;
+}
+
+.promo__bottom {
+    // max-width: calc(var(--container) + (var(--padding-container) * 2));
+    // padding: 0 var(--padding-container);
+    margin: 0 auto;
+    height: 4px;
+    position: relative;
+    bottom: 20px;
+    left: 0;
+
+    & span{
+        width: 23px !important;
+        height: 4px !important;
+        transition: all .3s;
+        // background-color: var(--line-color);
+        border-radius: 0 !important;
+
+        &:hover{
+            background-color: var(--link-color);
+        }
+
+        &:focus{
+            background-color: var(--link-color) ;
+        }
+    }
+}
+
+.promo-dots{
+    width: 18% !important;
+}

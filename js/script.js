@@ -25,6 +25,14 @@ if(navigationBtn && navigationList){
         navigationBtn.classList.toggle('active');
         body.classList.toggle('lock');
     });
-
-    
 };
+
+
+//slider
+
+var swiper = new Swiper(".promo__wrap", {
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});

@@ -3,6 +3,7 @@
 :root {
     --container: 1110px;
     --padding-container: 15px;
+
     --bg-color-main: #ffffff;
     --bg-color: #F4F8FD;
     --text-color: #323A49;
@@ -11,6 +12,7 @@
     --link-color: #275BA8;
     --line-color: #C7D0E2;
     --hovered--link-color: #386EBE;
+    --button-color: #2054A1;
 }
 
 *,
@@ -58,7 +60,9 @@ a {
     text-decoration: none;
     color: inherit;
     transition: all 0.5s ease 0s;
+    cursor: pointer;
 }
+
 
 ul {
     list-style: none;
