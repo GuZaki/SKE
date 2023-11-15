@@ -31,6 +31,13 @@ if(navigationBtn && navigationList){
 //slider
 
 var swiper = new Swiper(".promo__wrap", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".arrows .arrow-next",
+        prevEl: ".arrows .arrow-prev",
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

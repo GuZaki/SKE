@@ -670,7 +670,8 @@ section {
   height: 4px;
   position: relative;
   bottom: 20px;
-  left: 0;
+  left: 15px;
+  z-index: 10;
 }
 .promo__bottom span {
   width: 23px !important;
@@ -686,5 +687,30 @@ section {
 }
 
 .promo-dots {
-  width: 18% !important;
+  width: auto !important;
+}
+
+.arrows {
+  position: absolute;
+  width: 36px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  bottom: 322px;
+  right: 27px;
+  cursor: pointer;
+}
+
+.arrow-next:hover > svg > path > stroke {
+  stroke-opacity: 1;
+}
+.arrow-next:focus {
+  color: var(--link-color);
+}
+
+.arrow-prev:hover {
+  color: var(--link-color);
+}
+.arrow-prev:focus {
+  color: var(--link-color);
 }/*# sourceMappingURL=style.css.map */
