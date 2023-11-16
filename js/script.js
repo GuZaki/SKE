@@ -43,3 +43,36 @@ var swiper = new Swiper(".promo__wrap", {
         clickable: true,
     },
 });
+
+var swiper = new Swiper(".news__wrap", {
+    // slidesPerView: 3,
+    // spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".news__arrows .arrow-next",
+        prevEl: ".news__arrows .arrow-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        300: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        425: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+        740: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        940: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
+});

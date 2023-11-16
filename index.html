@@ -213,12 +213,16 @@
             <div class="promo__wrap swiper">
                 <div class="promo__slider swiper-wrapper">
                     <div class="promo__slider-item swiper-slide">
-                        <div class="promo__bg">
-                            <img src="./img/slider/0.png" alt="">
-                        </div>
-                        <div class="container">
+                        <picture class="promo__bg">
+                            <source srcset="./img/slider/slide01.png" media="(min-width:1024px)">
+                            <source srcset="./img/slider/slide01-1024.png" media="(min-width:768px)">
+                            <source srcset="./img/slider/slide01-325.png" media="(min-width:425px)">
+                            <img src="./img/slider/slide01.png" alt="">
+                        </picture>
+
+                        <div class="container promo__container">
                             <div class="slider-content">
-                                <h2 class="promo__subtitle">Передавайте показания вовремя</h2>
+                                <h2 class="promo__title title">Передавайте показания вовремя</h2>
                                 <p class="promo__text">Передавайте показания и оплачивайте без комиссии и очередей!</p>
                                 <button class="promo__btn">Подробнее</button>
                             </div>
@@ -226,11 +230,11 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/1.png" alt="">
+                            <img src="./img/slider/slide02.png" alt="">
                         </div>
-                        <div class="container">
+                        <div class="container promo__container">
                             <div class="slider-content">
-                                <h2 class="promo__subtitle">Оплачивайте онлайн</h2>
+                                <h2 class="promo__title title">Оплачивайте онлайн</h2>
                                 <p class="promo__text">Оплачивайте услуги онлайн круглосуточно и без комиссии!</p>
                                 <button class="promo__btn">Подробнее</button>
                             </div>
@@ -238,11 +242,11 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/2.png" alt="">
+                            <img src="./img/slider/slide03.png" alt="">
                         </div>
-                        <div class="container">
+                        <div class="container promo__container">
                             <div class="slider-content">
-                                <h2 class="promo__subtitle">Интернет-приемная</h2>
+                                <h2 class="promo__title title">Интернет-приемная</h2>
                                 <p class="promo__text">Поможем вам получить ответы на возникшие вопросы по электроснабжению.</p>
                                 <button class="promo__btn">Подробнее</button>
                             </div>
@@ -250,11 +254,11 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/3.png" alt="">
+                            <img src="./img/slider/slide04.png" alt="">
                         </div>
-                        <div class="container">
+                        <div class="container promo__container">
                             <div class="slider-content">
-                                <h2 class="promo__subtitle">Живите без ограничений</h2>
+                                <h2 class="promo__title title">Живите без ограничений</h2>
                                 <p class="promo__text">Наличие задолженности за энергоресурсы – основание для отключения</p>
                                 <button class="promo__btn">Подробнее</button>
                             </div>
@@ -262,11 +266,11 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/4.png" alt="">
+                            <img src="./img/slider/slide05.png" alt="">
                         </div>
-                        <div class="container">
+                        <div class="container promo__container">
                             <div class="slider-content">
-                                <h2 class="promo__subtitle">Договор - гарантии!</h2>
+                                <h2 class="promo__title title">Договор - гарантии!</h2>
                                 <p class="promo__text">Заключение или переоформление договора энергоснабжения</p>
                                 <button class="promo__btn">Подробнее</button>
                             </div>
@@ -274,18 +278,18 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/5.png" alt="">
+                            <img src="./img/slider/slide06.png" alt="">
                         </div>
-                        <div class="container">
+                        <div class="container promo__container">
                             <div class="slider-content">
-                                <h2 class="promo__subtitle">Передавайте показания вовремя</h2>
+                                <h2 class="promo__title title">Передавайте показания вовремя</h2>
                                 <p class="promo__text">Оплачивайте электроэнергию и передавайте показания без комиссии и очередей!</p>
                                 <button class="promo__btn">Подробнее</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="promo__bottom container">
+                <div class="promo__bottom container ">
                     <div class="arrows">
                         <div class="arrow-prev">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -304,6 +308,206 @@
                     <div class="promo-dots swiper-pagination"></div>
                 </div>
                 
+            </div>
+        </section>
+
+        <section class="options">
+            <div class="container">
+                <div class="options__wrap">
+                    <div class="options__item">
+                        <div class="options__item-icon">
+                            <img src="./img/service-links/1.svg" alt="">
+                        </div>
+                        <div class="options__item-content">
+                            <p></p>
+                            <a class="options__item-link" href="">
+                                <span>Как стать нашим клиентом</span>
+                                <div class="link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 5L19 12L12 19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <div class="options__item-icon">
+                            <img src="./img/service-links/2.svg" alt="">
+                        </div>
+                        <div class="options__item-content">
+                            <a class="options__item-link" href="">
+                                <span>Тарифы на электроэнергию для населения</span>
+                                <div class="link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 5L19 12L12 19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <div class="options__item-icon">
+                            <img src="./img/service-links/3.svg" alt="">
+                        </div>
+                        <div class="options__item-content">
+                            <a class="options__item-link" href="">
+                                <span>Способы передачи показаний</span>
+                                <div class="link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 5L19 12L12 19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <div class="options__item-icon">
+                            <img src="./img/service-links/4.svg" alt="">
+                        </div>
+                        <div class="options__item-content">
+                            <a class="options__item-link" href="">
+                                <span>Цены на электроэнергию для юридических лиц</span>
+                                <div class="link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 5L19 12L12 19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <div class="options__item-icon">
+                            <img src="./img/service-links/5.svg" alt="">
+                        </div>
+                        <div class="options__item-content">
+                            <a class="options__item-link" href="">
+                                <span>Способы оплаты</span>
+                                <div class="link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 5L19 12L12 19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <div class="options__item-icon">
+                            <img src="./img/service-links/6.svg" alt="">
+                        </div>
+                        <div class="options__item-content">
+                            <a class="options__item-link" href="">
+                                <span>Офисы обслуживания</span>
+                                <div class="link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 5L19 12L12 19" stroke="#275BA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="container">
+                
+                
+                <div class="news__wrap swiper">
+                    <div class="slider__top">
+                        <h2 class="news__subtitle subtitle">Новости</h2>
+                        <div class="news__arrows">
+                            <div class="news__arrow-prev arrow-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14.905 16.59L10.325 12L14.905 7.41L13.495 6L7.49499 12L13.495 18L14.905 16.59Z" fill="#275BA8" fill-opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="news__arrow-next arrow-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9.09501 7.41L13.675 12L9.09501 16.59L10.505 18L16.505 12L10.505 6L9.09501 7.41Z" fill="#2054A2" fill-opacity="0.3"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news__slider swiper-wrapper">
+                        <div class="news__slider-item swiper-slide">
+                                
+                            <div class="news__slider-img">
+                                <img src="./img/news/01 1.png" alt="">
+                            </div>
+                            <div class="news__slider-content">
+                                <small class="news__date">13.07.2020</small>
+                                <p class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</p>
+                                <p class="news__agreement">Напоминаем, что в соответствии с Правилами предоставления Правил предоставлени...</p>
+                            </div>
+                        </div>
+                        <div class="news__slider-item swiper-slide">
+                                
+                            <div class="news__slider-img">
+                                <img src="./img/news/2.png" alt="">
+                            </div>
+                            <div class="news__slider-content">
+                                <small class="news__date">13.07.2020</small>
+                                <p class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</p>
+                                <p class="news__agreement">Напоминаем, что в соответствии с Правилами предоставления Правил предоставлени...</p>
+                            </div>
+                        </div>
+                        <div class="news__slider-item swiper-slide">
+                                
+                            <div class="news__slider-img">
+                                <img src="./img/news/3.png" alt="">
+                            </div>
+                            <div class="news__slider-content">
+                                <small class="news__date">13.07.2020</small>
+                                <p class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</p>
+                                <p class="news__agreement">Напоминаем, что в соответствии с Правилами предоставления Правил предоставлени...</p>
+                            </div>
+                        </div>
+                        <div class="news__slider-item swiper-slide">
+                                
+                            <div class="news__slider-img">
+                                <img src="./img/news/4.png" alt="">
+                            </div>
+                            <div class="news__slider-content">
+                                <small class="news__date">13.07.2020</small>
+                                <p class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</p>
+                                <p class="news__agreement">Напоминаем, что в соответствии с Правилами предоставления Правил предоставлени...</p>
+                            </div>
+                        </div>
+                        <div class="news__slider-item swiper-slide">
+                                
+                            <div class="news__slider-img">
+                                <img src="./img/news/5.png" alt="">
+                            </div>
+                            <div class="news__slider-content">
+                                <small class="news__date">13.07.2020</small>
+                                <p class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</p>
+                                <p class="news__agreement">Напоминаем, что в соответствии с Правилами предоставления Правил предоставлени...</p>
+                            </div>
+                        </div>
+                        <div class="news__slider-item swiper-slide">
+                                
+                            <div class="news__slider-img">
+                                <img src="./img/news/noimg.png" alt="">
+                            </div>
+                            <div class="news__slider-content">
+                                <small class="news__date">13.07.2020</small>
+                                <p class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</p>
+                                <p class="news__agreement">Напоминаем, что в соответствии с Правилами предоставления Правил предоставлени...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__bottom">
+                        <div class="slider-dots swiper-pagination news__swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

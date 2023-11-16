@@ -193,6 +193,10 @@
     line-height: 21px; /* 150% */
     gap: 7px;
 
+    &:hover{
+        color: var(--link-color);
+    }
+
     @media(max-width: 1060px){
         margin-right: 0;
     }
@@ -228,8 +232,37 @@
     box-shadow: 0px 2px 8px 0px rgba(31, 33, 36, 0.15);
     @include nav-hidden;
 
-    @media(max-width: 680px){
+    @media(max-width: 970px){
+        width: 70vw;
+        right: -120px;
+        top: 47px;
+    }
+
+    @media(max-width: 720px){
+        left: -150px;
+        top: 35px;
+    }
+    
+    @media(max-width: 540px){
         width: 90vw;
+        left: -140px;
+    }
+
+    @media(max-width: 520px){
+        left: -115px;
+    }
+
+    @media(max-width: 450px){
+        left: -100px;
+    }
+
+    @media(max-width: 400px){
+        left: -70px;
+    }
+
+    @media(max-width: 350px){
+        left: -50px;
+        top: 38px;
     }
 
     & input {

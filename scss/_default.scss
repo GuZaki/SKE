@@ -100,17 +100,13 @@ fieldset {
 section{
     padding: 30px 0;
 
-//     // @media(max-width: 1024px){
-//     //     padding: 50px 0;
-//     // }
+    @media(max-width: 1024px){
+        padding: 34px 0;
+    }
 
-//     // @media(max-width: 992px){
-//     //     padding: 40px 0;
-//     // }
-
-//     // @media(max-width: 320px){
-//     //     padding: 37px 0;
-//     // }
+    @media(max-width: 880px){
+        padding: 20px 0;
+    }
 }
 
 .container {
@@ -121,15 +117,49 @@ section{
 
 //подзаголоки h2
 .title{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px; /* 112.5% */
 
+    @media(max-width: 1024px){
+        font-size: 48px;
+        line-height: 60px; /* 125% */
+    }
+
+    @media(max-width: 768px){
+        font-size: 36px;
+        line-height: 48px; /* 133.333% */
+    }
+
+    @media(max-width: 425px){
+        font-size: 21px;
+        line-height: 32px; /* 152.381% */
+    }
 }
 
-
 //подзаголоки h3
+.subtitle{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 47px; 
+
+    @media(max-width: 1024px){
+        font-size: 30px;
+        line-height: 39px; 
+    }
+
+    @media(max-width: 768px){
+        font-size: 24px;
+        line-height: 32px; 
+    }
+}
+
+//подзаголовки навигации
 @mixin subtitle{
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
+    
 }
 
 @mixin headline{

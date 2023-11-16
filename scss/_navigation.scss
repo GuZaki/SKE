@@ -15,7 +15,7 @@
         }
 
         @media(max-width: 970px){
-            padding: 15px 23px 15px;
+            padding: 15px 23px 7px;
         }
         
         @media(max-width: 320px){
@@ -89,6 +89,8 @@
                 }
                 
                 & a{
+                    padding-top: 16px;
+                    padding-bottom: 14px;
                     padding: 16px 29px 14px 30px;
                     display: block;
 
@@ -127,10 +129,6 @@
                     padding: 30px;
                     box-shadow: 0px 2px 8px 0px rgba(31, 33, 36, 0.15);                    
                     @include nav-hidden;
-
-                    // @media(max-width: 960px){
-                    //     column-count: 1;
-                    // }
                                         
                     & > li  {
                         width: 100%;
