@@ -70,7 +70,7 @@ var swiper = new Swiper(".news__wrap", {
             slidesPerView: 2,
             spaceBetween: 30,
         },
-        940: {
+        768: {
             slidesPerView: 3,
             spaceBetween: 30,
         },

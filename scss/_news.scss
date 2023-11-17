@@ -9,17 +9,15 @@
             margin-bottom: 40px;
         }
 
-    &__slider-item {
-    }
+        &-img {
+            margin-bottom: 15px;
+        }
 
-    &__slider-img {
-        margin-bottom: 15px;
-    }
-
-    &__slider-content {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__date {
@@ -73,7 +71,7 @@
             display: block;
         }
 
-        & span{
+        & > span{
             width: 23px !important;
             height: 4px !important;
             transition: all .3s;
@@ -90,10 +88,9 @@
             }
     
             &:focus{
-                background-color: var(--link-color) ;
+                background-color: var(--link-color);
             }
         }
-    }
     }
 }
 
@@ -126,3 +123,4 @@
         }
     }
 }
+
