@@ -1,0 +1,119 @@
+/*footer*/
+.footer {
+    background-color: var(--bg-color);
+    margin-top: 30px;
+
+    @media (max-width: 768px) {
+            margin-top: 40px;
+        }
+
+    &__wrap {
+        padding-top: 50px;
+        padding-bottom: 32px;
+
+        @media (max-width: 768px) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 425px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__top {
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--line-color);
+    }
+
+    &__navigation-list {
+        
+        & > ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @media (max-width: 730px) {
+                gap: 20px 100px;
+                justify-content: center;
+            }
+            
+            & > li{
+                max-width: 20%;
+
+                @media (max-width: 1024px) {
+                    max-width: 22%;
+                }
+
+                @media (max-width: 730px) {
+                    max-width: 35%;
+                }
+
+                & > ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px; /* 150% */
+
+                    @media (max-width: 700px) {
+                        // font-size: 12px;
+                        // line-height: normal;
+                        // gap: 5px;
+                        // flex-direction: column;
+
+                    }
+                }
+
+                & a {
+                    &:hover{
+                        color: var(--hovered--link-color);
+                    }
+                }
+            }
+
+            & > li{
+                & > p{
+                    @include subtitle;
+                    margin-bottom: 15px;
+
+                    @media (max-width: 700px) {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                
+            }
+
+            & > li:last-child{
+                & > a{
+                    @include subtitle;
+                    display: block;
+                    margin-top: 20px;
+
+                    @media (max-width: 700px) {
+                        font-size: 12px;
+                        margin-top: 10px;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+
+    &__bottom {
+    }
+
+    &__bottom-left {
+    }
+
+    &__bottom-center {
+    }
+
+    &__bottom-right {
+    }
+}

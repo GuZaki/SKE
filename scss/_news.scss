@@ -10,7 +10,12 @@
         }
 
         &-img {
+            display: block;
             margin-bottom: 15px;
+
+            &:hover{
+                transform: scale(110%);
+            }
         }
 
         &-content {
@@ -27,6 +32,7 @@
     }
 
     &__text {
+        display: block;
         font-size: 16px;
         font-weight: 700;
         line-height: 21px; /* 131.25% */
@@ -39,88 +45,26 @@
     }
 
     &__arrows {
-        position: absolute;
-        display: flex;
-        gap: 10px;
-        cursor: pointer;
-        top: 0;
-        right: 0;
-
-        @media(max-width: 768px){
-            display: none;
-        }
+        @include arrows-block;
     }
 
     &__arrow-prev{
-        width: 36px;
-        height: 36px;
-        background-color: var(--bg-color);
+        @include arrow;
     }
 
     &__arrow-next{
-        width: 36px;
-        height: 36px;
-        background-color: var(--bg-color);
+        @include arrow;
     }
 
     &__swiper-pagination{
-        display: none;
-        bottom: 0 !important;
-
-        @media(max-width: 768px){
-            display: block;
-        }
+        @include pagination;
 
         & > span{
-            width: 23px !important;
-            height: 4px !important;
-            transition: all .3s;
-            border-radius: 0 !important;
-    
-            @media(max-width: 768px){
-                width: 8px !important;
-                margin-right: 3px !important;
-                margin-left: 2px !important;
-            }
-    
-            &:hover{
-                background-color: var(--link-color);
-            }
-    
-            &:focus{
-                background-color: var(--link-color);
-            }
+            @include pagination-dots;
         }
     }
 }
 
-.slider {
 
-    &__top{
-        margin-bottom: 30px;
 
-        @media(max-width: 768px){
-            margin-bottom: 20px;
-        }
-    }
-}
-
-.arrow-next,
-.arrow-prev {
-    &:hover{
-        & > svg{
-            & > path{
-                fill-opacity: 1;
-            }
-        }
-    }
-
-    &:focus{
-        & > svg{
-            & > path{
-                fill-opacity: 1;
-            }
-        }
-    }
-}
 

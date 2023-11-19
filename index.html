@@ -213,13 +213,14 @@
             <div class="promo__wrap swiper">
                 <div class="promo__slider swiper-wrapper">
                     <div class="promo__slider-item swiper-slide">
-                        <picture class="promo__bg">
-                            <source srcset="./img/slider/slide01.png" media="(min-width:1024px)">
-                            <source srcset="./img/slider/slide01-1024.png" media="(min-width:768px)">
-                            <source srcset="./img/slider/slide01-325.png" media="(min-width:425px)">
-                            <img src="./img/slider/slide01.png" alt="">
-                        </picture>
-
+                        <div class="promo__bg">
+                            <picture>
+                                <source srcset="./img/promo-slider/img-1_desctop_small.jpg" media="(min-width:1024px)">
+                                <source srcset="./img/promo-slider/img-1_tablet.jpg" media="(min-width:768px)">
+                                <source srcset="./img/promo-slider/img-1_mobile.jpg" media="(min-width:425px)">
+                                <img src="./img/promo-slider/img-1.jpg" alt="">
+                            </picture>
+                        </div>
                         <div class="container promo__container">
                             <div class="slider-content">
                                 <h2 class="promo__title title">Передавайте показания вовремя</h2>
@@ -230,7 +231,7 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/slide02.png" alt="">
+                            <img src="./img/promo-slider/img-2.png" alt="">
                         </div>
                         <div class="container promo__container">
                             <div class="slider-content">
@@ -242,7 +243,7 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/slide03.png" alt="">
+                            <img src="./img/promo-slider/img-3.png" alt="">
                         </div>
                         <div class="container promo__container">
                             <div class="slider-content">
@@ -254,7 +255,7 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/slide04.png" alt="">
+                            <img src="./img/promo-slider/img-4.jpg" alt="">
                         </div>
                         <div class="container promo__container">
                             <div class="slider-content">
@@ -266,7 +267,7 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/slide05.png" alt="">
+                            <img src="./img/promo-slider/img-5.jpg" alt="">
                         </div>
                         <div class="container promo__container">
                             <div class="slider-content">
@@ -278,7 +279,7 @@
                     </div>
                     <div class="promo__slider-item swiper-slide">
                         <div class="promo__bg">
-                            <img src="./img/slider/slide06.png" alt="">
+                            <img src="./img/promo-slider/img-6.jpg" alt="">
                         </div>
                         <div class="container promo__container">
                             <div class="slider-content">
@@ -417,8 +418,6 @@
 
         <section class="news">
             <div class="container">
-                
-                
                 <div class="news__wrap swiper">
                     <div class="slider__top">
                         <h2 class="news__subtitle subtitle">Новости</h2>
@@ -439,12 +438,12 @@
                     <div class="news__slider swiper-wrapper">
                         <div class="news__slider-item swiper-slide">
                                 
-                            <div class="news__slider-img">
+                            <a class="news__slider-img">
                                 <img src="./img/news/01 1.png" alt="">
-                            </div>
+                            </a>
                             <div class="news__slider-content">
                                 <small class="news__date">13.07.2020</small>
-                                <p class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</p>
+                                <a class="news__text">Правила предоставления коммунальных услуг собственникам и пользователям помещений</a>
                                 <p class="news__agreement">Напоминаем, что в соответствии с Правилами предоставления Правил предоставлени...</p>
                             </div>
                         </div>
@@ -510,10 +509,129 @@
                 </div>
             </div>
         </section>
+
+        <section class="partner-links">
+            <div class="container">
+                <div class="partner-links__wrap swiper">
+                    <div class="slider__top">
+                        <h2 class="partner-links__subtitle subtitle">Полезные ссылки</h2>
+                        <div class="partner-links__arrows">
+                            <div class="partner-links__arrow-prev arrow-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14.905 16.59L10.325 12L14.905 7.41L13.495 6L7.49499 12L13.495 18L14.905 16.59Z" fill="#275BA8" fill-opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="partner-links__arrow-next arrow-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9.09501 7.41L13.675 12L9.09501 16.59L10.505 18L16.505 12L10.505 6L9.09501 7.41Z" fill="#2054A2" fill-opacity="0.3"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partner-links__slider swiper-wrapper">
+                        <div class="partner-links__slider-item swiper-slide">
+                            <div class="partner-links__slider-img">
+                                <img src="./img/bottom-links/1.svg" alt="">
+                            </div>
+                            <p class="partner-links__text">Управление Федеральной службы судебных приставов по Ставропольскому краю</p>
+                        </div>
+                        <div class="partner-links__slider-item swiper-slide">
+                            <div class="partner-links__slider-img">
+                                <img src="./img/bottom-links/2.svg" alt="">
+                            </div>
+                            <p class="partner-links__text">Год памяти и славы 2020</p>
+                        </div>
+                        <div class="partner-links__slider-item swiper-slide">
+                            <div class="partner-links__slider-img">
+                                <img src="./img/bottom-links/3.svg" alt="">
+                            </div>
+                            <p class="partner-links__text">Свеча памяти</p>
+                        </div>
+                        <div class="partner-links__slider-item swiper-slide">
+                            <div class="partner-links__slider-img">
+                                <img src="./img/bottom-links/4.svg" alt="">
+                            </div>
+                            <p class="partner-links__text">Сбербанк России</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slider__bottom">
+                        <div class="slider-dots swiper-pagination partner-links__swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrap">
+                    <div class="footer__top">
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li>
+                                    <p>О предприятии</p>
+                                    <ul>
+                                        <li><a href="#">Руководство предприятия</a></li>
+                                        <li><a href="#">Учредительные документы</a></li>
+                                        <li><a href="#">Структура предприятия</a></li>
+                                        <li><a href="#">Персональные данные</a></li>
+                                        <li><a href="#">Стандарты обслуживания</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Потребителям</p>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Юридическим лицам</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">Населению</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Закупки</p>
+                                    <ul>
+                                        <li><a href="#">Положение о закупках</a></li>
+                                        <li><a href="#">План закупок</a></li>
+                                        <li><a href="#">Реестр закупок</a></li>
+                                        <li><a href="#">Сведения о заключенных договорах</a></li>
+                                        <li><a href="#">Реестр договоров</a></li>
+                                        <li><a href="#">НПА по 223-ФЗ</a></li>
+                                        <li><a href="#">Информация, размещенная в соответствии с п. 13 ст. 4 223-ФЗ</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Раскрытие информации</p>
+                                    <ul>
+                                        <li><a href="#">Субъекты оптового и розничного рынка</a></li>
+                                        <li><a href="#">Стандарты раскрытия информации</a></li>
+                                        <li><a href="#">Иная информация, подлежащая опубликованию</a></li>
+                                    </ul>
+
+                                    <a href="#">Интернет приемная</a>
+                                    <a href="#">Личный кабинет</a>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="footer__bottom">
+                        <div class="footer__bottom-left"></div>
+                        <div class="footer__bottom-center"></div>
+                        <div class="footer__bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
+
 
