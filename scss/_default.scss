@@ -14,6 +14,18 @@
     --line-color: #C7D0E2;
     --hovered--link-color: #386EBE;
     --button-color: #2054A1;
+
+    @media (max-width: 1024px) {
+        --padding-container: 40px;
+    }
+
+    @media (max-width: 768px) {
+        --padding-container: 24px;
+    }
+
+    @media (max-width: 425px) {
+        --padding-container: 15px;
+    }
 }
 
 *,

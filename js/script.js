@@ -1,4 +1,4 @@
-const searchBtn = document.querySelector('.header__search');
+const searchBtn = document.querySelector('.header__search-btn');
 const searchForm = document.querySelector('.form-search');
 const searchBtnClosed = document.querySelector('.form-search__btn-closed');
 
@@ -7,7 +7,7 @@ const navigationBtn = document.querySelector('.navigation__mobile');
 
 const body = document.body;
 
-if(searchBtn && searchForm){
+if(searchBtn && searchForm ){
     searchBtn.addEventListener('click', () =>{
         searchForm.classList.toggle('form-search--active');
         body.classList.toggle('lock');
