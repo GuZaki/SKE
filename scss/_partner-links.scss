@@ -28,6 +28,12 @@
         padding: 15px;
         border-radius: 3px;
         border: 1px solid var(--border-color);
+
+        &:hover{
+            & p{
+                color: var(--hovered--link-color);
+            }
+        }
     }
 
     &__slider-img {

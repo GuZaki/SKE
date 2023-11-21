@@ -94,26 +94,40 @@
 
     &__search{
         position: relative;
-        padding: 14px 30px 8px;
+        // padding: 14px 30px 8px;
         border-right: 1px solid rgba(255, 255, 255, 0.05);
         border-left: 1px solid rgba(255, 255, 255, 0.05);
 
-        @media (max-width: 1024px) {
-            padding: 14px 18px 8px;
-        }
+        // @media (max-width: 1024px) {
+        //     padding: 14px 18px 8px;
+        // }
 
         @media(max-width: 970px){
             border: none;
             padding: 0;
+            height: 22px;
         }
 
         &:hover{
             background-color: var(--hovered--link-color);
             cursor: pointer;
+
+            @media(max-width: 970px){
+                background-color: transparent;
+            }
         }
 
         &-btn{
             width: 100%;
+            padding: 16px 30px;
+
+            @media (max-width: 1024px) {
+                padding: 14px 18px;
+            }
+
+            @media (max-width: 1024px) {
+                padding: 0;
+            }
         }
     }
 }

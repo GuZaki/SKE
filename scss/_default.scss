@@ -2,7 +2,7 @@
 
 :root {
     --container: 1110px;
-    --padding-container: 20px;
+    --padding-container: 15px;
 
     --bg-color-main: #ffffff;
     --bg-color: #F4F8FD;
@@ -15,17 +15,17 @@
     --hovered--link-color: #386EBE;
     --button-color: #2054A1;
 
-    @media (max-width: 1024px) {
-        --padding-container: 40px;
-    }
+    // @media (max-width: 1024px) {
+    //     --padding-container: 20px;
+    // }
 
-    @media (max-width: 768px) {
-        --padding-container: 24px;
-    }
+    // @media (max-width: 768px) {
+    //     --padding-container: 24px;
+    // }
 
-    @media (max-width: 425px) {
-        --padding-container: 15px;
-    }
+    // @media (max-width: 425px) {
+    //     --padding-container: 15px;
+    // }
 }
 
 *,
