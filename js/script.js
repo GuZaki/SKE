@@ -2,8 +2,9 @@ const searchBtn = document.querySelector('.header__search-btn');
 const searchForm = document.querySelector('.form-search');
 const searchBtnClosed = document.querySelector('.form-search__btn-closed');
 
-const navigationList = document.querySelector('.navigation__list');
+const navigationList = document.querySelector('.mobile__menu');
 const navigationBtn = document.querySelector('.navigation__mobile');
+const mobileNavigationBtnClosed = document.querySelector('.mobile-form-search__btn-closed');
 
 const body = document.body;
 
@@ -26,6 +27,13 @@ if(navigationBtn && navigationList){
         body.classList.toggle('lock');
     });
 };
+
+if(mobileNavigationBtnClosed && navigationList){
+    mobileNavigationBtnClosed.addEventListener('click', () => {
+        navigationList.classList.remove('navigation__list--active');
+        body.classList.remove('lock');
+    })
+}
 
 
 //slider

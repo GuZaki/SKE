@@ -1,0 +1,131 @@
+/*mobile-menu*/
+.mobile {
+    
+    &__menu {
+        position: absolute;
+        background-color: var(--bg-color-main);
+        height: 100vh;
+        width: 400px;
+        display: none;
+
+    }
+
+	&__links {
+        padding-left: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 26px;
+        margin-bottom: 51px;
+	}
+
+	&__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+	}
+
+	&__link-logo {
+        width: 28px;
+        height: 28px;
+	}
+
+	&__link-text {
+        color: var(--text-link-color);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px; /* 131.25% */
+	}
+
+    &__page-vertions{
+        padding-left: 15px;
+
+        & > a{
+            color: var(--link-color);
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 21px; /* 150% */
+        }
+        
+    }
+}
+
+.mobile-form-search {
+    position: relative;
+    @include form-search;
+    border-bottom: 1px solid var(--border-color);
+
+    &__btn {
+        @include form-search-btn;
+    }
+
+    &__btn-closed {
+        @include form-search-btn-closed;
+    }
+}
+
+
+.mobile-navigation {
+
+    &__list {
+        background-color: var(--bg-color);
+        margin-bottom: 34px;
+
+        & > ul {
+        flex-direction: column;
+        
+        & > li{
+            padding: 15px;
+            color: var(--text-color);
+            border-bottom: 1px solid var(--border-color);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 21px; /* 131.25% */
+
+            & > a{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & > svg{
+                    height: 24px;
+                    width: 24px;
+                }
+                
+            }
+
+            & > ul{
+                display: none;
+            }
+            
+        }
+    }
+    }
+}
+
+
+.mobile__menu{
+
+    &.navigation__list--active{
+        display: block;
+        top: 92px;
+        z-index: 10;
+    }
+}
+
+// @media(max-width: 970px){
+    
+//     position: absolute;
+//     top: 82px;
+//     left: 0;
+
+
+// & > ul{
+//                 left: 109%;
+//                 column-count: 1;
+//                 min-width: 350px;
+//                 padding: 20px 10px 10px 20px;
+//             }
+ 
+
+
+// }

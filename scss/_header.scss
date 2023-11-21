@@ -1,6 +1,6 @@
 /*header*/
 .header {
-
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -125,7 +125,7 @@
                 padding: 14px 18px;
             }
 
-            @media (max-width: 1024px) {
+            @media (max-width: 970px) {
                 padding: 0;
             }
         }
@@ -213,6 +213,10 @@
 
     &:hover{
         color: var(--link-color);
+
+        @media(max-width: 968px){
+            color: var(--line-color);
+        }
     }
 
     @media(max-width: 1060px){
@@ -246,36 +250,29 @@
     width: 100vw;
     position: fixed;
     right: 0;
-    top: 157px;
+    top: 158px;
     box-shadow: 0px 2px 8px 0px rgba(31, 33, 36, 0.15);
+    @include form-search;
     @include nav-hidden;
 
     @media(max-width: 970px){
-        top: 74px;
+        top: 92px;
     }
 
     @media(max-width: 720px){
-        top: 50px;
+        top: 68px;
     }
 
-    & input {
-        width: 100%;
-        border: none;
-        height: 50px;    
-        padding-left: 56px;
-        outline: none;
+    @media(max-width: 425px){
+        top: 51px;
     }
 
     &__btn {
-        position: absolute;
-        top: 14px;
-        left: 20px;
+        @include form-search-btn;
     }
 
     &__btn-closed {
-        position: absolute;
-        top: 13px;
-        right: 13px;
+        @include form-search-btn-closed;
     }
 }
 

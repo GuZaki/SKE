@@ -14,6 +14,7 @@
     --line-color: #C7D0E2;
     --hovered--link-color: #386EBE;
     --button-color: #2054A1;
+    --border-color: #E9EDF3;
 
     // @media (max-width: 1024px) {
     //     --padding-container: 20px;
@@ -177,6 +178,31 @@ section{
 @mixin headline{
     font-size: 16px;
     line-height: 21px; /* 131.25% */
+}
+
+
+//выпадающее меню поиска
+@mixin form-search{
+
+    & input {
+        width: 100%;
+        border: none;
+        height: 50px;    
+        padding-left: 56px;
+        outline: none;
+    }
+}
+
+@mixin form-search-btn {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+
+@mixin form-search-btn-closed {
+    position: absolute;
+    top: 13px;
+    right: 13px;
 }
 
 //скрывает выпадающие окна в меню навигации
