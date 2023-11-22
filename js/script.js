@@ -6,6 +6,9 @@ const navigationList = document.querySelector('.mobile__menu');
 const navigationBtn = document.querySelector('.navigation__mobile');
 const mobileNavigationBtnClosed = document.querySelector('.mobile-form-search__btn-closed');
 
+const asideBlock = document.querySelector('.aside-cookies');
+const asideBtnClosed = document.querySelector('.aside-cookies__btn');
+
 const body = document.body;
 
 if(searchBtn && searchForm ){
@@ -32,8 +35,20 @@ if(mobileNavigationBtnClosed && navigationList){
     mobileNavigationBtnClosed.addEventListener('click', () => {
         navigationList.classList.remove('navigation__list--active');
         body.classList.remove('lock');
-    })
-}
+    });
+};
+
+setTimeout(() => {
+    asideBlock.classList.add('aside-cookies-vissible')
+}, 3000);
+
+if(asideBlock && asideBtnClosed){
+    asideBtnClosed.addEventListener('click', () => {
+        asideBlock.classList.remove('aside-cookies-vissible');
+        body.classList.remove('lock');
+    });
+};
+
 
 
 //slider
@@ -83,11 +98,11 @@ var swiper = new Swiper(".news__wrap", {
     },
 });
 
-var swiper = new Swiper(".partner-links__wrap", {
+var swiper = new Swiper(".partners__wrap", {
     loop: true,
     navigation: {
-        nextEl: ".partner-links__arrows .arrow-next",
-        prevEl: ".partner-links__arrows .arrow-prev",
+        nextEl: ".partners__arrows .arrow-next",
+        prevEl: ".partners__arrows .arrow-prev",
     },
     pagination: {
         el: ".swiper-pagination",

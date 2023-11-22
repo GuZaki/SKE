@@ -583,7 +583,7 @@
         <section class="news">
             <div class="container">
                 <div class="news__wrap swiper">
-                    <div class="slider__top">
+                    <div class="slider-top">
                         <h2 class="news__subtitle subtitle">Новости</h2>
                         <div class="news__arrows">
                             <div class="news__arrow-prev arrow-prev">
@@ -667,25 +667,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slider__bottom">
-                        <div class="slider-dots swiper-pagination news__swiper-pagination"></div>
+                    <div class="slider-bottom">
+                        <div class="news__swiper-pagination slider-dots swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="partner-links">
+        <section class="partners">
             <div class="container">
-                <div class="partner-links__wrap swiper">
-                    <div class="slider__top">
-                        <h2 class="partner-links__subtitle subtitle">Полезные ссылки</h2>
-                        <div class="partner-links__arrows">
-                            <div class="partner-links__arrow-prev arrow-prev">
+                <div class="partners__wrap swiper">
+
+                    <div class="slider-top">
+                        <h2 class="partners__subtitle subtitle">Полезные ссылки</h2>
+                        <div class="partners__arrows">
+                            <div class="partners__arrow-prev arrow-prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M14.905 16.59L10.325 12L14.905 7.41L13.495 6L7.49499 12L13.495 18L14.905 16.59Z" fill="#275BA8" fill-opacity="0.3"/>
                                 </svg>
                             </div>
-                            <div class="partner-links__arrow-next arrow-next">
+                            <div class="partners__arrow-next arrow-next">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M9.09501 7.41L13.675 12L9.09501 16.59L10.505 18L16.505 12L10.505 6L9.09501 7.41Z" fill="#2054A2" fill-opacity="0.3"/>
                                 </svg>
@@ -693,45 +694,117 @@
                         </div>
                     </div>
 
-                    <div class="partner-links__slider swiper-wrapper">
-                        <a href="#" class="partner-links__slider-item swiper-slide">
-                            <div class="partner-links__slider-img">
+                    <div class="partners__slider swiper-wrapper">
+                        <a href="#" class="partners__slider-item swiper-slide">
+                            <div class="partners__slider-img">
                                 <img src="./img/bottom-links/1.svg" alt="">
                             </div>
-                            <p class="partner-links__text">Управление Федеральной службы судебных приставов по Ставропольскому краю</p>
+                            <p class="partners__text">Управление Федеральной службы судебных приставов по Ставропольскому краю</p>
                         </a>
-                        <a href="#" class="partner-links__slider-item swiper-slide">
-                            <div class="partner-links__slider-img">
+                        <a href="#" class="partners__slider-item swiper-slide">
+                            <div class="partners__slider-img">
                                 <img src="./img/bottom-links/2.svg" alt="">
                             </div>
-                            <p class="partner-links__text">Год памяти и славы 2020</p>
+                            <p class="partners__text">Год памяти и славы 2020</p>
                         </a>
-                        <a href="#" class="partner-links__slider-item swiper-slide">
-                            <div class="partner-links__slider-img">
+                        <a href="#" class="partners__slider-item swiper-slide">
+                            <div class="partners__slider-img">
                                 <img src="./img/bottom-links/3.svg" alt="">
                             </div>
-                            <p class="partner-links__text">Свеча памяти</p>
+                            <p class="partners__text">Свеча памяти</p>
                         </a>
-                        <a href="#" class="partner-links__slider-item swiper-slide">
-                            <div class="partner-links__slider-img">
+                        <a href="#" class="partners__slider-item swiper-slide">
+                            <div class="partners__slider-img">
                                 <img src="./img/bottom-links/4.svg" alt="">
                             </div>
-                            <p class="partner-links__text">Сбербанк России</p>
+                            <p class="partners__text">Сбербанк России</p>
                         </a>
                     </div>
                     
-                    <div class="slider__bottom">
-                        <div class="slider-dots swiper-pagination partner-links__swiper-pagination"></div>
+                    <div class="slider-bottom">
+                        <div class="partners__swiper-pagination slider-dots swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__wrap">
-                    <div class="footer__top">
-                        <nav class="footer__navigation-list">
+        <aside class="aside-cookies">
+            <div class="aside-cookies__wrap">
+                <button class="aside-cookies__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M13.5 4.5L4.5 13.5" stroke="#323A49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.5 4.5L13.5 13.5" stroke="#323A49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <p class="aside-cookies__text">
+                    Пользуясь настоящим веб-сайтом, вы даете свое согласие на использование файлов cookies. 
+                    <a href="#" class="aside-cookies__link">Узнать подробнее</a>
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__top">
+                    <div class="footer__top-row">
+                        <div class="footer__top-coll">
+                            <div class="footer__top-caption">О предприятии</div>
+                            <nav class="footer__top-menu">
+                                <ul>
+                                    <li><a href="#">Руководство предприятия</a></li>
+                                    <li><a href="#">Учредительные документы</a></li>
+                                    <li><a href="#">Структура предприятия</a></li>
+                                    <li><a href="#">Персональные данные</a></li>
+                                    <li><a href="#">Стандарты обслуживания</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__top-coll">
+                            <div class="footer__top-caption">Потребителям</div>
+                            <nav class="footer__top-menu">
+                                <ul>
+                                    <li><a href="#">Юридическим лицам</a></li>
+                                    <li><a href="#">Населению</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__top-coll">
+                            <div class="footer__top-caption">Закупки</div>
+                            <nav class="footer__top-menu">
+                                <ul>
+                                    <li><a href="#">Положение о закупках</a></li>
+                                    <li><a href="#">План закупок</a></li>
+                                    <li><a href="#">Реестр закупок</a></li>
+                                    <li><a href="#">Сведения о заключенных договорах</a></li>
+                                    <li><a href="#">Реестр договоров</a></li>
+                                    <li><a href="#">НПА по 223-ФЗ</a></li>
+                                    <li><a href="#">Информация, размещенная в соответствии с п. 13 ст. 4 223-ФЗ</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__top-coll">
+                            <div class="footer__top-caption">Раскрытие информации</div>
+                            <nav class="footer__top-menu">
+                                <ul>
+                                    <li><a href="#">Субъекты оптового и розничного рынка</a></li>
+                                    <li><a href="#">Стандарты раскрытия информации</a></li>
+                                    <li><a href="#">Иная информация, подлежащая опубликованию</a></li>
+                                </ul>
+                            </nav>
+
+                            <nav class="footer__top-menu footer__top-menu-big">
+                                <ul>
+                                    <li><a href="#">Интернет приемная</a></li>
+                                    <li><a href="#">Личный кабинет</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                        <!-- <nav class="footer__navigation-list">
                             <ul>
                                 <li>
                                     <p>О предприятии</p>
@@ -780,34 +853,44 @@
                                     <a href="#">Контакты</a>
                                 </li>
                             </ul>
-                        </nav>
-                    </div>
+                        </nav> -->
+                </div>
 
-                    <div class="footer__bottom">
-                        <div class="footer__bottom-left">
-                            <div class="footer__logo">
-                                <div class="footer__logo-img">
-                                    <img src="./img/logo.svg" alt="Логотип Ставрополькоммунэлектро">
-                                </div>
-                                <p class="logo-text footer__logo-text">Ставрополькоммунэлектро<small>© 1998-2023 ГУП СК «Ставрополькоммунэлектро»</small></p>
-                                <small class="small-mobile">© 1998-2023 ГУП СК «Ставрополькоммунэлектро»</small>
+                <div class="footer__bottom">
+                    <div class="footer__bottom-left">
+                        <div class="footer__logo">
+                            <div class="footer__logo-img">
+                                <img src="./img/logo.svg" alt="Логотип Ставрополькоммунэлектро">
                             </div>
+                            <p class="logo-text footer__logo-text">Ставрополькоммунэлектро<small>© 1998-2023 ГУП СК «Ставрополькоммунэлектро»</small></p>
+                            <small class="small-mobile">© 1998-2023 ГУП СК «Ставрополькоммунэлектро»</small>
                         </div>
-                        <div class="footer__bottom-center">
-                            <a href="#">Политика в отношении обработки персональных данных</a>
-                        </div>
-                        <div class="footer__bottom-right">
-                            <small>Создание сайта <sup>2021</sup> Slimart</small>
-                        </div>
+                    </div>
+                    <div class="footer__bottom-center">
+                        <a href="#">Политика в отношении обработки персональных данных</a>
+                    </div>
+                    <div class="footer__bottom-right">
+                        <small>Создание сайта <sup>2021</sup> Slimart</small>
                     </div>
                 </div>
             </div>
-        </footer>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        </div>
+    </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
 
 
+<!--
+    
+- Можно заменить название через дефис тогда на slider-top (было slider__top) в секциях partners и news (там они дублируются), 
+или нужно обязательно использовать наименование секций в названии класса?
+- Верно ли расположение aside элемента? На разрешении 1024px мы появление этого окна вообще скрываем?
+- В header по макету мобильная версия идет с разрешением 320px, тогда логотип становится ровно по центру (вы смотрите мобильную версию на разрешении 375px),
+поэтому левый отсуп для логотипа не стала добавлять. Или нужно все-таки отталкиваться от 375px всегда?
+
+
+
+-->

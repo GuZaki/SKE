@@ -173,6 +173,7 @@ section{
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
+    line-height: normal;
 }
 
 @mixin headline{
@@ -223,7 +224,7 @@ section{
 //слайдер
 .slider {
 
-    &__top{
+    &-top{
         margin-bottom: 30px;
 
         @media(max-width: 768px){
