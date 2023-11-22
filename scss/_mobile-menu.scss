@@ -6,8 +6,8 @@
         background-color: var(--bg-color-main);
         height: 100vh;
         width: 400px;
+        max-width: 100%;
         display: none;
-
     }
 
 	&__links {
@@ -45,7 +45,6 @@
             font-weight: 700;
             line-height: 21px; /* 150% */
         }
-        
     }
 }
 
@@ -63,69 +62,103 @@
     }
 }
 
-
 .mobile-navigation {
 
     &__list {
         background-color: var(--bg-color);
         margin-bottom: 34px;
+        display: block;
 
         & > ul {
         flex-direction: column;
         
-        & > li{
-            padding: 15px;
-            color: var(--text-color);
-            border-bottom: 1px solid var(--border-color);
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 21px; /* 131.25% */
+            & > li{
+                position: relative;
+                padding: 15px;
+                color: var(--text-color);
+                border-bottom: 1px solid var(--border-color);
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 21px; /* 131.25% */
 
-            & > a{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                & > svg{
-                    height: 24px;
-                    width: 24px;
+                &:nth-child(3){
+                    & > ul{
+                        top: -105px;
+                    }
                 }
-                
-            }
 
-            & > ul{
-                display: none;
+                &:nth-child(4){
+                    & > ul{
+                        top: -157px;
+                    }
+                }
+
+                &:nth-child(5){
+                    & > ul{
+                        top: -208px;
+                    }
+                }
+
+                & > a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &::after{
+                        position: absolute;
+                        content: url('../img/header/arrow-mob.svg');
+                        right: 13px;
+                        top: 13px;
+                    } 
+                }
+
+                &:hover > ul{
+                    @include nav-vissible;
+                }
+
+                & > ul{
+                    @include nav-hidden;
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100vh;
+                    left: 0;
+                    top: 0;
+                    background-color: var(--bg-color-main);
+
+                    & > li{
+                        position: relative;
+                        padding: 15px;
+                        width: 100%;
+                        color: var(--text-color);
+                        border-bottom: 1px solid var(--border-color);
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 21px; /* 131.25% */
+                        background-color: var(--bg-color);
+
+                        & > a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }    
+                }
             }
-            
         }
     }
-    }
 }
-
 
 .mobile__menu{
 
     &.navigation__list--active{
         display: block;
-        top: 92px;
+        top: 78px;
         z-index: 10;
+
+        @media(max-width: 720px){
+            top: 50px;
+        }
     }
 }
 
-// @media(max-width: 970px){
-    
-//     position: absolute;
-//     top: 82px;
-//     left: 0;
-
-
-// & > ul{
-//                 left: 109%;
-//                 column-count: 1;
-//                 min-width: 350px;
-//                 padding: 20px 10px 10px 20px;
-//             }
- 
-
-
-// }
