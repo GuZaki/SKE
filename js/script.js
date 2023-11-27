@@ -1,19 +1,28 @@
 const searchBtn = document.querySelector('.header__search-btn');
+const searchBtnMob = document.querySelector('.header__search-btn-mob');
+
 const searchForm = document.querySelector('.form-search');
+const searchFormMob = document.querySelector('.form-search-mob');
+
 const searchBtnClosed = document.querySelector('.form-search__btn-closed');
 
 const navigationList = document.querySelector('.mobile__menu');
 const navigationBtn = document.querySelector('.navigation__mobile');
 const mobileNavigationBtnClosed = document.querySelector('.mobile-form-search__btn-closed');
 
-const asideBlock = document.querySelector('.aside-cookies');
-const asideBtnClosed = document.querySelector('.aside-cookies__btn');
+const asideBlock = document.querySelector('.fix-cookies');
+const asideBtnClosed = document.querySelector('.fix-cookies__btn');
 
 const body = document.body;
 
 if(searchBtn && searchForm ){
     searchBtn.addEventListener('click', () =>{
         searchForm.classList.toggle('form-search--active');
+        body.classList.toggle('lock');
+    });
+
+    searchBtnMob.addEventListener('click', () =>{
+        searchFormMob.classList.toggle('form-search--active');
         body.classList.toggle('lock');
     });
 
@@ -39,12 +48,12 @@ if(mobileNavigationBtnClosed && navigationList){
 };
 
 setTimeout(() => {
-    asideBlock.classList.add('aside-cookies-vissible')
+    asideBlock.classList.add('fix-cookies_vissible')
 }, 3000);
 
 if(asideBlock && asideBtnClosed){
     asideBtnClosed.addEventListener('click', () => {
-        asideBlock.classList.remove('aside-cookies-vissible');
+        asideBlock.classList.remove('fix-cookies_vissible');
         body.classList.remove('lock');
     });
 };

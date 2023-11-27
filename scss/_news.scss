@@ -17,6 +17,8 @@
             z-index: 10;
 
             & img {
+                transition: transform .4s;
+
                 &:hover{
                     transform: scale(1.1);
                     position: relative;
@@ -43,6 +45,11 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 21px; /* 131.25% */
+        transform: color .3s;
+
+        &:hover{
+            color: var(--hovered--link-color);
+        }
     }
 
     &__agreement{

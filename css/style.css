@@ -507,6 +507,9 @@ section {
     top: 50px;
   }
 }
+.form-search input {
+  font-family: "Mplus 1p", sans-serif;
+}
 .form-search__btn {
   position: absolute;
   top: 14px;
@@ -1087,6 +1090,9 @@ section {
   overflow: hidden;
   z-index: 10;
 }
+.news__slider-img img {
+  transition: transform 0.4s;
+}
 .news__slider-img img:hover {
   transform: scale(1.1);
   position: relative;
@@ -1107,6 +1113,10 @@ section {
   font-size: 16px;
   font-weight: 700;
   line-height: 21px; /* 131.25% */
+  transform: color 0.3s;
+}
+.news__text:hover {
+  color: var(--hovered--link-color);
 }
 .news__agreement {
   font-size: 14px;
@@ -1492,7 +1502,7 @@ section {
   position: absolute;
   background-color: var(--bg-color-main);
   height: 100vh;
-  width: 400px;
+  width: 100%;
   max-width: 100%;
   display: none;
 }
@@ -1538,6 +1548,9 @@ section {
   height: 50px;
   padding-left: 56px;
   outline: none;
+}
+.mobile-form-search input {
+  font-family: "Mplus 1p", sans-serif;
 }
 .mobile-form-search__btn {
   position: absolute;
@@ -1625,17 +1638,12 @@ section {
 
 .mobile__menu.navigation__list--active {
   display: block;
-  top: 78px;
+  top: 0;
   z-index: 10;
 }
-@media (max-width: 720px) {
-  .mobile__menu.navigation__list--active {
-    top: 50px;
-  }
-}
 
-/*aside-cookies*/
-.aside-cookies {
+/*fix-cookies*/
+.fix-cookies {
   position: fixed;
   width: 350px;
   height: 116px;
@@ -1649,27 +1657,35 @@ section {
   visibility: hidden;
   transition: all 0.8s;
 }
-.aside-cookies-vissible {
+.fix-cookies_vissible {
   opacity: 1;
   visibility: visible;
 }
-@media (max-width: 1024px) {
-  .aside-cookies {
-    display: none;
+@media (max-width: 768px) {
+  .fix-cookies {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
   }
 }
-.aside-cookies__wrap {
+.fix-cookies__wrap {
   padding: 28px 29px 25px;
 }
-.aside-cookies__text {
+@media (max-width: 768px) {
+  .fix-cookies__wrap {
+    padding: 30px 15px 15px;
+  }
+}
+.fix-cookies__text {
   font-size: 14px;
   font-weight: 500;
   line-height: 21px; /* 150% */
 }
-.aside-cookies__link {
+.fix-cookies__link {
   color: var(--link-color);
 }
-.aside-cookies__btn {
+.fix-cookies__btn {
   position: absolute;
   top: 10px;
   right: 10px;

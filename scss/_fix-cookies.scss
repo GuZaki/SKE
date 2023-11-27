@@ -1,6 +1,6 @@
-/*aside-cookies*/
+/*fix-cookies*/
 
-.aside-cookies {
+.fix-cookies {
     position: fixed;
     width: 350px;
     height: 116px;
@@ -16,17 +16,25 @@
     transition: all .8s;
 
 
-    &-vissible{
+    &_vissible{
         opacity: 1;
         visibility: visible;
     }
 
-    @media (max-width: 1024px) {
-        display: none;
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        right: 0;
     }
 
     &__wrap {
         padding: 28px 29px 25px;
+
+        @media (max-width: 768px) {
+            padding: 30px 15px 15px;
+        }
+
     }
 
     &__text {
