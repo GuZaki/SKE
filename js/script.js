@@ -15,7 +15,7 @@ const asideBtnClosed = document.querySelector('.fix-cookies__btn');
 
 const body = document.body;
 
-if(searchBtn && searchForm ){
+if(searchBtn && searchForm){
     searchBtn.addEventListener('click', () =>{
         searchForm.classList.toggle('form-search--active');
         body.classList.toggle('lock');
@@ -58,7 +58,12 @@ if(asideBlock && asideBtnClosed){
     });
 };
 
-
+// window.addEventListener('resize', function() {
+//         if (window.innerWidth > 971) {
+//             searchBtn.classList.remove('header__search-btn');
+//             searchForm.classList.remove('form-search--active');
+//     }
+// });
 
 //slider
 
@@ -67,8 +72,8 @@ var swiper = new Swiper(".promo__wrap", {
     spaceBetween: 30,
     loop: true,
     navigation: {
-        nextEl: ".arrows .arrow-next",
-        prevEl: ".arrows .arrow-prev",
+        nextEl: ".promo__arrows .promo__arrow-next",
+        prevEl: ".promo__arrows .promo__arrow-prev",
     },
     pagination: {
         el: ".swiper-pagination",

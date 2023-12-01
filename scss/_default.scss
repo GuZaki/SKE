@@ -223,14 +223,11 @@ section{
 }
 
 //слайдер
-.slider {
+@mixin slider-top {
+    margin-bottom: 30px;
 
-    &-top{
-        margin-bottom: 30px;
-
-        @media(max-width: 768px){
-            margin-bottom: 20px;
-        }
+    @media(max-width: 768px){
+        margin-bottom: 20px;
     }
 }
 

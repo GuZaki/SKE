@@ -53,5 +53,13 @@
         right: 10px;
         width: 18px;
         height: 18px;
+
+        &:hover{
+            & svg{
+                & path{
+                    stroke: var(--link-color);
+                }
+            }
+        }
     }
 }

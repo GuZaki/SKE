@@ -1,6 +1,10 @@
 /*partner-links*/
 
 .partners {
+    &__slider-top{
+        @include slider-top;
+    }
+
     &__arrows {
         @include arrows-block;
     }

@@ -131,120 +131,120 @@
             }
         }
     }
-}
 
-//slider
-.slider-content {
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    position: relative;
-    z-index: 10;
+    //slider
+    &__slider-content {
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        z-index: 10;
 
-    @media(max-width: 1024px){
-        max-width: 375px;
+        @media(max-width: 1024px){
+            max-width: 375px;
+        }
+
+        @media(max-width: 768px){
+            max-width: 380px;
+            gap: 20px;
+        }
+
+        @media(max-width: 425px){
+            max-width: 260px;
+            gap: 10px;
+        }
     }
 
-    @media(max-width: 768px){
-        max-width: 380px;
-        gap: 20px;
+    &__bottom {
+        margin: 0 auto;
+        height: 4px;
+        position: relative;
+        bottom: 20px;
+        left: 15px;
+        z-index: 10;
+        
+        @media(max-width: 1024px){
+            margin-left: 42px;
+        }
+    
+        @media(max-width: 768px){
+            bottom: 6px;
+            left: -22px;
+        }
+    
+        @media(max-width: 425px){
+            left: -28px;
+        }
+    
+        & span{
+            width: 23px !important;
+            height: 4px !important;
+            transition: all .3s;
+            border-radius: 0 !important;
+    
+            @media(max-width: 768px){
+                width: 8px !important;
+                margin-right: 3px !important;
+                margin-left: 2px !important;
+            }
+    
+            &:hover{
+                background-color: var(--link-color);
+            }
+    
+            &:focus{
+                background-color: var(--link-color) ;
+            }
+        }
+    }
+    
+    &__dots {
+        width: auto !important;
     }
 
-    @media(max-width: 425px){
-        max-width: 260px;
+    &__arrows {
+        position: absolute;
+        width: 36px;
+        display: flex;
         gap: 10px;
+        flex-direction: column;
+        bottom: 322px;
+        right: 27px;
+        cursor: pointer;
+    
+        @media(max-width: 1024px){
+            bottom: 193px;
+            right: 55px;
+        }
+        
+        @media(max-width: 768px){
+            display: none;
+        }
     }
+    
+    &__arrow-next,
+    &__arrow-prev {
+        &:hover{
+            & > svg{
+                & > path{
+                    stroke-opacity: 1;
+                }
+            }
+        }
+    
+        &:focus{
+            & > svg{
+                & > path{
+                    stroke-opacity: 1;
+                }
+            }
+        }
+    }    
 }
-
 
 .slick-arrow,
 .slick-dots{
     position: absolute;
 }
 
-.promo__bottom {
-    margin: 0 auto;
-    height: 4px;
-    position: relative;
-    bottom: 20px;
-    left: 15px;
-    z-index: 10;
-    
-    @media(max-width: 1024px){
-        margin-left: 42px;
-    }
-
-    @media(max-width: 768px){
-        bottom: 6px;
-        left: -22px;
-    }
-
-    @media(max-width: 425px){
-        left: -28px;
-    }
-
-    & span{
-        width: 23px !important;
-        height: 4px !important;
-        transition: all .3s;
-        border-radius: 0 !important;
-
-        @media(max-width: 768px){
-            width: 8px !important;
-            margin-right: 3px !important;
-            margin-left: 2px !important;
-        }
-
-        &:hover{
-            background-color: var(--link-color);
-        }
-
-        &:focus{
-            background-color: var(--link-color) ;
-        }
-    }
-}
-
-.promo-dots {
-    width: auto !important;
-}
-
-.arrows {
-    position: absolute;
-    width: 36px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    bottom: 322px;
-    right: 27px;
-    cursor: pointer;
-
-    @media(max-width: 1024px){
-        bottom: 193px;
-        right: 55px;
-    }
-    
-    @media(max-width: 768px){
-        display: none;
-    }
-}
-
-.arrow-next,
-.arrow-prev {
-    &:hover{
-        & > svg{
-            & > path{
-                stroke-opacity: 1;
-            }
-        }
-    }
-
-    &:focus{
-        & > svg{
-            & > path{
-                stroke-opacity: 1;
-            }
-        }
-    }
-}
