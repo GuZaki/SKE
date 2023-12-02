@@ -17,13 +17,17 @@ const body = document.body;
 
 window.addEventListener('resize', function() { //открывается при разрешении до 970 px
     if (window.innerWidth > 971) {
-        if(searchBtn && searchForm){
+        // if(searchBtn && searchForm && searchBtnClosed){
             searchBtn.addEventListener('click', () =>{
                 searchForm.classList.toggle('form-search--active');
                 body.classList.toggle('lock');
             });
+
+            searchBtnClosed.addEventListener('click', () =>{
+                searchForm.classList.remove('form-search--active');
+            });
         };
-    };
+    // };
 });
 
 if(searchBtn && navigationList){ //открывается при разрешении от 970 px
@@ -40,12 +44,12 @@ if(searchFormMob && searchBtnMob){
     });
 };
 
-if(searchBtnClosed && searchForm){
-    searchBtnClosed.addEventListener('click', () =>{
-        searchForm.classList.remove('form-search--active');
-        body.classList.remove('lock');
-    });
-};
+// if(searchBtnClosed && searchForm){
+//     searchBtnClosed.addEventListener('click', () =>{
+//         searchForm.classList.remove('form-search--active');
+//         body.classList.remove('lock');
+//     });
+// };
 
 if(navigationBtn && navigationList){
     navigationBtn.addEventListener('click', () =>{
@@ -55,9 +59,10 @@ if(navigationBtn && navigationList){
     });
 };
 
-if(mobileNavigationBtnClosed && navigationList){
+if(mobileNavigationBtnClosed && navigationList && searchForm){
     mobileNavigationBtnClosed.addEventListener('click', () => {
         navigationList.classList.remove('navigation__list--active');
+        searchForm.classList.remove('form-search--active');
         body.classList.remove('lock');
     });
 };
