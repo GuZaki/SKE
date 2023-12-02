@@ -15,17 +15,32 @@ const asideBtnClosed = document.querySelector('.fix-cookies__btn');
 
 const body = document.body;
 
-if(searchBtn && searchForm){
+window.addEventListener('resize', function() { //открывается при разрешении до 970 px
+    if (window.innerWidth > 971) {
+        if(searchBtn && searchForm){
+            searchBtn.addEventListener('click', () =>{
+                searchForm.classList.toggle('form-search--active');
+                body.classList.toggle('lock');
+            });
+        };
+    };
+});
+
+if(searchBtn && navigationList){ //открывается при разрешении от 970 px
     searchBtn.addEventListener('click', () =>{
-        searchForm.classList.toggle('form-search--active');
+        navigationList.classList.toggle('navigation__list--active');
         body.classList.toggle('lock');
     });
+};
 
+if(searchFormMob && searchBtnMob){
     searchBtnMob.addEventListener('click', () =>{
         searchFormMob.classList.toggle('form-search--active');
         body.classList.toggle('lock');
     });
+};
 
+if(searchBtnClosed && searchForm){
     searchBtnClosed.addEventListener('click', () =>{
         searchForm.classList.remove('form-search--active');
         body.classList.remove('lock');
@@ -57,13 +72,6 @@ if(asideBlock && asideBtnClosed){
         body.classList.remove('lock');
     });
 };
-
-// window.addEventListener('resize', function() {
-//         if (window.innerWidth > 971) {
-//             searchBtn.classList.remove('header__search-btn');
-//             searchForm.classList.remove('form-search--active');
-//     }
-// });
 
 //slider
 
