@@ -1562,6 +1562,9 @@ section {
   top: 13px;
   right: 13px;
 }
+.mobile-form-search__btn-closed::hover > svg > path {
+  stroke: var(--link-color);
+}
 
 .mobile-navigation__list {
   background-color: var(--bg-color);
@@ -1600,12 +1603,6 @@ section {
   right: 13px;
   top: 13px;
 }
-.mobile-navigation__list > ul > li:hover > ul {
-  z-index: 5;
-  transform: rotateX(0deg);
-  opacity: 1;
-  visibility: visible;
-}
 .mobile-navigation__list > ul > li > ul {
   transform-origin: 0 0;
   transform: rotateX(90deg);
@@ -1640,6 +1637,13 @@ section {
   display: block;
   top: 0;
   z-index: 10;
+}
+
+.active-list {
+  z-index: 5;
+  transform: rotateX(0deg);
+  opacity: 1;
+  visibility: visible;
 }
 
 /*fix-cookies*/

@@ -13,11 +13,25 @@ const mobileNavigationBtnClosed = document.querySelector('.mobile-form-search__b
 const asideBlock = document.querySelector('.fix-cookies');
 const asideBtnClosed = document.querySelector('.fix-cookies__btn');
 
+const navMobLink = document.querySelectorAll('#mobile-link');
+const navMobList = document.querySelectorAll('#mobile-list');
+
 const body = document.body;
+
+if(navMobLink && navMobList){
+    navMobLink.forEach(link =>{
+        link.addEventListener('click', () =>{
+            navMobList.forEach(i =>{
+                i.classList.toggle('active-list');
+            })
+        });
+    })
+};
+
 
 window.addEventListener('resize', function() { //открывается при разрешении до 970 px
     if (window.innerWidth > 971) {
-        // if(searchBtn && searchForm && searchBtnClosed){
+        if(searchBtn && searchForm && searchBtnClosed){
             searchBtn.addEventListener('click', () =>{
                 searchForm.classList.toggle('form-search--active');
                 body.classList.toggle('lock');
@@ -27,7 +41,7 @@ window.addEventListener('resize', function() { //открывается при �
                 searchForm.classList.remove('form-search--active');
             });
         };
-    // };
+    };
 });
 
 if(searchBtn && navigationList){ //открывается при разрешении от 970 px
