@@ -13,20 +13,26 @@ const mobileNavigationBtnClosed = document.querySelector('.mobile-form-search__b
 const asideBlock = document.querySelector('.fix-cookies');
 const asideBtnClosed = document.querySelector('.fix-cookies__btn');
 
-const navMobLink = document.querySelectorAll('#mobile-link');
-const navMobList = document.querySelectorAll('#mobile-list');
+const navMobLink = document.querySelectorAll('.mobile-navigation__list > ul > li > a');
+const navMobList = document.querySelector('.mobile-navigation__list > ul > li > ul');
+
+const list = document.querySelector('.mobile-navigation__list');
 
 const body = document.body;
 
-if(navMobLink && navMobList){
-    navMobLink.forEach(link =>{
-        link.addEventListener('click', () =>{
-            navMobList.forEach(i =>{
-                i.classList.toggle('active-list');
-            })
-        });
+// list.addEventListener('click', (event) =>{
+//     console.log(event.target.nextElementSibling)
+//     if(event.target.nodeName !== 'A') return;
+//     event.target.nextElementSibling.classList.toggle('active-list');
+// })
+
+navMobLink.forEach(link =>{
+    link.addEventListener('click', () =>{
+        console.log(link.nextElementSibling)
+        
+        link.nextElementSibling.classList.toggle('active-list');
     })
-};
+});
 
 
 window.addEventListener('resize', function() { //открывается при разрешении до 970 px
