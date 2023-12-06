@@ -9,6 +9,8 @@
         width: 100%;
         max-width: 100%;
         display: none;
+
+        
     }
 
 	&__links {
@@ -62,7 +64,7 @@
         @include form-search-btn;
     }
 
-    &__btn-closed {
+    &__menu-btn-closed {
         @include form-search-btn-closed;
 
         &::hover{
@@ -131,8 +133,9 @@
 
                 & > ul{
                     @include nav-hidden;
-                    position: absolute;
                     display: block;
+                    position: absolute;
+                    
                     width: 100%;
                     height: 100vh;
                     left: 0;
@@ -174,3 +177,4 @@
 .active-list{
     @include nav-vissible;
 }
+

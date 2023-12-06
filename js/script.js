@@ -29,7 +29,7 @@ const body = document.body;
 navMobLink.forEach(link =>{
     link.addEventListener('click', () =>{
         console.log(link.nextElementSibling)
-        
+
         link.nextElementSibling.classList.toggle('active-list');
     })
 });

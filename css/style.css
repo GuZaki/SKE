@@ -1608,8 +1608,8 @@ section {
   transform: rotateX(90deg);
   opacity: 0;
   visibility: hidden;
-  position: absolute;
   display: block;
+  position: absolute;
   width: 100%;
   height: 100vh;
   left: 0;
